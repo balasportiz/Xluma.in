@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xluma.in - Build. Rebuild. Elevate.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#00D1FF',
+              secondary: '#141414',
+              accent: '#00FFA3',
+              'text-primary': '#FFFFFF',
+              'text-secondary': '#AAAAAA',
+              background: '#0A0A0A',
+              'card-background': '#1C1C1C',
+            },
+            fontFamily: {
+              heading: ['Manrope', 'sans-serif'],
+              body: ['Sora', 'sans-serif'],
+            },
+            animation: {
+              'shimmer-bg': 'shimmer-bg 15s ease infinite',
+              'fade-in': 'fade-in 0.8s ease-out forwards',
+              'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+              'fade-in-down': 'fade-in-down 0.8s ease-out forwards',
+              'slide-in-right': 'slide-in-right 0.8s ease-out forwards',
+              'pulse-slow': 'pulse-slow 4s infinite ease-in-out',
+            },
+            keyframes: {
+              'shimmer-bg': {
+                '0%, 100%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'top right',
+                },
+                '50%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'bottom left',
+                },
+              },
+              'fade-in': {
+                '0%': {
+                  opacity: '0',
+                },
+                '100%': {
+                  opacity: '1',
+                },
+              },
+              'fade-in-up': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateY(20px)',
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateY(0)',
+                },
+              },
+              'fade-in-down': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateY(-20px)',
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateY(0)',
+                },
+              },
+              'slide-in-right': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateX(30px)',
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateX(0)',
+                },
+              },
+              'pulse-slow': {
+                '0%, 100%': { opacity: 0.3 },
+                '50%': { opacity: 0.15 },
+              },
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0A0A0A;
+        font-family: 'Sora', sans-serif;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 30px 30px;
+      }
+      .glow-shadow {
+        box-shadow: 0 0 15px rgba(0, 209, 255, 0);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      .glow-shadow:hover {
+        box-shadow: 0 0 30px rgba(0, 209, 255, 0.4);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
